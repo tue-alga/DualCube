@@ -1,0 +1,53 @@
+[package]
+name = "douconel-test-env"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+lto = true
+codgen-units = 1
+opt-level = 3
+
+
+[profile.dev]
+opt-level = 3
+
+[lints.clippy]
+all = { level = "warn", priority = 1 }
+pedantic = { level = "warn", priority = 2 }
+nursery = { level = "warn", priority = 3 }
+cargo = { level = "warn", priority = 4 }
+missing_panics_doc = "allow"
+missing_errors_doc = "allow"
+
+[dependencies]
+douconel = { path = "crates/douconel"}
+hutspot = { path = "crates/hutspot" }
+
+bevy = "0.14.2"
+bevy_egui = "0.30.1"
+smooth-bevy-cameras = "0.12.0"
+bevy_mod_raycast = "0.18"
+
+rfd = "0.15.3"
+rayon = "1.8.1"
+itertools = "0.14.0"
+
+serde = { version = "1.0.219", features = ["rc", "derive"] }
+serde_json = "1.0.137"
+petgraph = { version = "0.7.1", features = ["rayon", "serde-1"] }
+slotmap = { version = "1.0.7", features = ["serde"] }
+
+kdtree = { version = "0.7.0", features = ["serialize"]}
+ordered-float = { version = "5.0.0", features = ["serde"]}
+bimap = "0.6.3"
+log = "0.4.25"
+rand = "0.8.5"
+tico = "2.0.0"
+winit = "0.30.8"
+image = "0.25.5"
+priority-queue = "=2.1.1"
+enum-iterator = "2.1.0"
+ahash = "0.8.11"
+ryu = "1.0.19"
+

@@ -1,0 +1,16 @@
+[package]
+name = "hutspot"
+version = "0.0.1"
+edition = "2021"
+authors = ["Snoep <maxim@snoep.io>"]
+
+[dependencies]
+nalgebra = "0.33.0"
+approx = "0.5.1"
+pathfinding = "4.9.1"
+ordered-float = "5.0.0"
+itertools = "0.13.0"
+glam = "0.27.0"
+bevy_render = "0.14.2"
+rayon = "1.10.0"
+log = "0.4.22"
